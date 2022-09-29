@@ -5,29 +5,33 @@
 {% endblock meta %}
 
 {% block content %}
-
-<div class = "login">
-
-    <h1>Login</h1>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Login </a>
+    </div>
+</nav>
+<div class = "login" >
 
     <form method="POST" action="">
         {% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control form-control-lg"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control form-control-lg"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn btn-primary" type="submit" value="Login"></td>
-            </tr>
-        </table>
+        <body style="background-color: #256D85;">
+            <table>
+                <tr>
+                    <td>Username: </td>
+                    <td><input type="text" name="username" placeholder="Username" class="form-control form-control-lg" style="background-color: #DFD3C3; "></td>
+                </tr>
+                        
+                <tr>
+                    <td>Password: </td>
+                    <td><input type="password" name="password" placeholder="Password" class="form-control form-control-lg" style="background-color: #DFD3C3;"></td>
+                </tr>
+    
+                <tr>
+                    <td></td>
+                    <td><input class="btn btn-primary" type="submit" value="Login"></td>
+                </tr>
+            </table>
+        </body>
     </form>
 
     {% if messages %}

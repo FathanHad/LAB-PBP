@@ -6,12 +6,17 @@
 
 {% block content %}  
 
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Formulir Registrasi </a>
+    </div>
+</nav>
+
 <div class = "login">
     
-    <h1>Formulir Registrasi</h1>  
-
         <form method="POST" >  
             {% csrf_token %}  
+           <body style="background-color: #256D85;">
             <table>  
                 {{ form.as_table }}  
                 <tr>  
@@ -19,6 +24,7 @@
                     <td><input class="btn btn-dark" type="submit" name="submit" value="Daftar"/></td>  
                 </tr>  
             </table>  
+           </body>
         </form>
 
     {% if messages %}  
